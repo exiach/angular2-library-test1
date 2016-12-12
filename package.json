@@ -4,7 +4,7 @@
   "scripts": {
     "lint": "tslint ./*.ts ./src/{,*/}*.ts",    
     "test": "tsc && karma start",
-    "postinstall": "typings install",
+    "postinstall": "typings install && npm run tsc",
     "prepublish": "tsc && npm run tsc",
     "tsc": "tsc",
     "typings": "typings",
