@@ -2,7 +2,6 @@
   "name": "test1",
   "version": "0.1.0",
   "scripts": {
-    //"lint": "tslint src/**/*.ts",
     "lint": "tslint ./*.ts ./src/{,*/}*.ts",    
     "test": "tsc && karma start",
     "postinstall": "typings install",
@@ -10,7 +9,6 @@
     "tsc": "tsc",
     "typings": "typings",
     "rimraf": "rimraf",
-    //"test": "tsc && karma start",
     "test-watch": "tsc && concurrently \"tsc -w\" \"karma start karma.conf.js\"",
     "clean": "npm cache clean && npm run rimraf -- node_modules dist",
     "preclean:install": "npm run clean",
