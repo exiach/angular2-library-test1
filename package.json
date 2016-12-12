@@ -2,19 +2,12 @@
   "name": "test1",
   "version": "0.1.0",
   "scripts": {
-    "lint": "tslint ./*.ts ./src/{,*/}*.ts",    
+    "lint": "tslint src/**/*.ts",
     "test": "tsc && karma start",
-    "postinstall": "typings install && npm run tsc",
-    "prepublish": "tsc && npm run tsc",
+    "postinstall": "typings install && tsc",
+    "prepublish": "tsc",
     "tsc": "tsc",
-    "typings": "typings",
-    "test-watch": "tsc && concurrently \"tsc -w\" \"karma start karma.conf.js\"",
-    "clean": "npm cache clean && npm run rimraf -- node_modules dist",
-    "preclean:install": "npm run clean",
-    "clean:install": "npm set progress=false && npm i",
-    "commit": "git-cz",
-    "build": "tsc -d && ngc",
-    "semantic-release": "semantic-release pre && npm run build && npm publish && semantic-release post"
+    "typings": "typings"
   },
   "repository": {
     "type": "git",
