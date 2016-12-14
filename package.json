@@ -1,13 +1,14 @@
 {
-  "name": "test1",
+  "name": "ng2-library-test1",
   "version": "0.1.0",
   "scripts": {
     "lint": "tslint src/**/*.ts",
     "test": "tsc && karma start",
-    "postinstall": "typings install",
+    "postinstall": "typings install && tsc",
     "prepublish": "tsc",
     "tsc": "tsc",
-    "typings": "typings"
+    "typings": "typings",
+    "build": "rm -rf lib && tsc -p src"
   },
   "repository": {
     "type": "git",
@@ -15,7 +16,7 @@
   },
   "author": {
     "name": "Daniel Canqui",
-    "email": "daniel.canqui@jalasoft.com"
+    "email": "you.nightmare.00@gmail.com"
   },
   "keywords": [
     "angular",
@@ -35,7 +36,7 @@
     "codelyzer": "^0.0.28",
     "rxjs": "5.0.0-beta.12",
     "tslint": "^3.15.1",
-    "typescript": "2.0.2",
+    "typescript": "2.1.4",
     "typings":"^1.0.4",
     "zone.js": "0.6.23"
   },
